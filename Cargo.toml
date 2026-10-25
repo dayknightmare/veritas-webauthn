@@ -1,0 +1,32 @@
+[package]
+name = "veritas-webauthn"
+version = "0.1.0"
+authors = ["Miguel Colombo <miguelcolombo3@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/dayknightmare/veritas-webauthn"
+keywords = ["webauthn", "passkey", "authentication", "security"]
+categories = ["authentication", "cryptography", "encoding", "web-programming",]
+readme = "README.md"
+description = "A Rust library for WebAuthn (Web Authentication) that provides a secure and efficient implementation of the WebAuthn protocol, enabling developers to integrate passwordless authentication and passkey support into their applications."
+
+[lib]
+name = "veritas_webauthn"
+path = "src/lib.rs"
+
+[dependencies]
+url = { version = "2.5", features = ["serde"] }
+thiserror = "2.0"
+serde = { version = "1.0", features = ['derive'] }
+serde_json = "1.0"
+base64 = "0.23"
+rand = "0.10"
+cbor2 = { version = "1.1.6", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+sha2 = "0.11"
+
+[lints.rust]
+unused_variables = "deny"
+
+[lints.clippy]
+unwrap_used = "deny"
+
